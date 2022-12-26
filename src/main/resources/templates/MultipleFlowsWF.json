@@ -1,0 +1,44 @@
+{
+  "name": "simple_workflow",
+  "description": "Simple Workflow",
+  "version": 1,
+  "tasks": [
+    {
+      "name": "addnumbers",
+      "taskReferenceName": "addnumbers_ref_1",
+      "inputParameters": {
+        "num1": "${workflow.input.num1}",
+        "num2": "${workflow.input.num2}"
+      },
+      "type": "SIMPLE"
+    },
+    {
+      "name": "multiplyby2",
+      "taskReferenceName": "multiplyby2_ref_1",
+      "inputParameters": {
+        "added": "${addnumbers_ref_1.output.addition}"
+      },
+      "type": "SIMPLE"
+    },
+    {
+      "name": "multiplyby5",
+      "taskReferenceName": "multiplyby5_1",
+      "inputParameters": {
+        "doubled": "${multiplyby2_ref_1.output.mb2}"
+      },
+      "type": "SIMPLE"
+    }
+  ],
+  "inputParameters": [],
+  "outputParameters": {
+    "wfop": "${addnumbers_ref_1.output.addition}"
+  },
+  "schemaVersion": 2,
+  "restartable": true,
+  "workflowStatusListenerEnabled": false,
+  "ownerEmail": "testemail@gmail.com",
+  "timeoutPolicy": "ALERT_ONLY",
+  "timeoutSeconds": 0,
+  "variables": {},
+  "inputTemplate": {}
+}
