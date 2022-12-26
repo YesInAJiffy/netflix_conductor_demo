@@ -2,8 +2,7 @@
 
 ### How to [Run Conductor]
 
-Conductor can running via locally or via Docker. 
-We can get the docker of Conductor by pulls with command: 
+RUN THE BELOW TO RUN CONDUCTOR LOCALLY 
 
 ```
 $ git clone https://github.com/Netflix/conductor.git
@@ -19,13 +18,16 @@ We can use this command to execute docker-compose.yaml.
 ```
 docker-compose up
 ``` 
-By now, the only docker worked is docker-compose.yaml.
+
+
 
 
 We can see on docker-compose.yaml, that file will run 3 images
-- Conductor Server, to CRUD a workflow, task or to trigger a workflow, etc [Conductor Server API Spec]. Conductor server uses memory as database, so when the server was down, the data will reset.
-- Conductor UI, to show information workflow, task (state, input, output, etc)
-- Elastic, do not know yet
+- Conductor Server.
+- Conductor UI.
+- Elastisearch.
+
+https://conductor.netflix.com/gettingstarted/running-locally-docker.html
 
 When Conductor is running, we get access to Conductor Server and Conductor UI. 
 - Conductor Server must run on port 8080, so when run the image alone, we can use command (images build with forward port 8080):
