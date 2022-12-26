@@ -93,9 +93,12 @@ http://localhost:5000/execution/<ID_EXECUTIONS>
 ```
 On that page, we can see the state of Workflow, input and output of the task that worker has executed.
 
+
 [Create Workflow and System Task]
 
 [Create Workflow and System Task]: https://conductor.netflix.com/labs/running-first-workflow.html
+
+Reference: https://orkes.io/content/docs/how-tos/Workers/build-a-java-task-worker
 
 
 [Conductor Server API Spec]: https://conductor.netflix.com/apispec.html
@@ -109,3 +112,5 @@ On that page, we can see the state of Workflow, input and output of the task tha
 
 [Create Worker]: https://github.com/Netflix/conductor/blob/main/client/src/test/java/com/netflix/conductor/client/sample/Main.java
 [Conductor Netflix]: https://conductor.netflix.com/
+
+
