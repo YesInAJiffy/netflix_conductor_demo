@@ -1,5 +1,8 @@
 # [Conductor Netflix]
 
+### For details, please refer the below video
+https://www.youtube.com/watch?v=i3fSVoI_l-U
+
 ### How to [Run Conductor]
 
 RUN THE BELOW TO RUN CONDUCTOR LOCALLY 
